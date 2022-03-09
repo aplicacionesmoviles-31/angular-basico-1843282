@@ -4,12 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
     <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" />
 
-
+    <link rel="stylesheet" href="styles.css">
     <title>Practica HTML</title>
 </head>
 <body>
@@ -18,43 +17,128 @@
           <ion-tab tab="inicio"> <!--pestaña de inicio-->
             <h1>Inicio</h1>
           </ion-tab>
-
           <ion-tab tab="buscar"> <!--pestaña de buscar-->
             <h1>Espacio para buscar</h1>
           </ion-tab>
-
           <ion-tab tab="foto"> <!--pestaña de foto-->
             <h1>Espacio para subir fotografia</h1>
           </ion-tab>
-
-
+          
           <ion-tab tab="comprar"> <!--pestaña de comprar-->
             <h1>Espacio para comprar</h1>
           </ion-tab>
-
           <ion-tab tab="perfil"> <!--Pestaña de perfil-->
             <h1>Contenido de perfil</h1>
-
             <ion-content>
             <ion-grid> <!--Seccion de cuadricula-->
                 <ion-row> <!--Fila 1-->
-                  <ion-col size="3"> <!--Columna 1-->
+                  <ion-col> <!--Columna 1-->
                     Foto
                   </ion-col>
                   <ion-col> <!--Columna 2-->
-                    Publicaciones
+                    <ion-row>
+                      <ion-col> 
+                      9
+                      </ion-col>
+
+                    </ion-row>
+                    <ion-row>
+                      <ion-col>
+                        publicaciones
+                      </ion-col>
+                    </ion-row>
                   </ion-col>
+
                   <ion-col> <!--Columna 3-->
-                   Seguidores
+                    <ion-row>
+                      <ion-col>
+                        1500
+                      </ion-col>
+
+                    </ion-row>
+                    <ion-row>
+                      <ion-col>
+                        Seguidores
+                      </ion-col>
+                    </ion-row>
                   </ion-col>
+
                   <ion-col> <!--Columna 3-->
-                    Siguiendo
+                    <ion-row>
+                      <ion-col>
+                        20
+                      </ion-col>
+
+                    </ion-row>
+                    <ion-row>
+                      <ion-col>
+                        Siguiendo
+                      </ion-col>
+                    </ion-row>
                 </ion-col>
                 </ion-row>
               </ion-grid>
+
+            <ion-grid> <!--Seccion de Bio-->
+              <ion-row>
+                <ion-col>
+                  Sobre Mí
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+
+            <ion-grid> <!--Seccion de Botones-->
+              <ion-row>
+                <ion-col>
+                  <ion-button>Seguir</ion-button> <!--Boton de Seguir-->
+                </ion-col>
+                <ion-col>
+                  <ion-button>Mensaje</ion-button> <!--Boton de Mandar Mensaje-->
+                </ion-col>
+                <ion-col>
+                  <ion-button>Whatsapp</ion-button> <!--Boton de Mensaje de whatsapp-->
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+
+
+            <ion-grid> <!--Contenido de Galeria-->
+              <ion-row> <!--Fila 1-->
+                <ion-col>
+                  <img src="perrito.jpeg" alt="pug">
+                </ion-col>
+                <ion-col>
+                  <img src="perrito2.jpeg" alt="husky">
+                </ion-col>
+                <ion-col>
+                  <img src="perrito3.jpeg" alt="lomito">
+                </ion-col>
+              </ion-row>
+              <ion-row> <!--fila 2-->
+                <ion-col>
+                  <img src="perrito4.jpeg" alt="blacky">
+                </ion-col>
+                <ion-col>
+                  <img src="perrito5.jpeg" alt="white">
+                </ion-col>
+                <ion-col>
+                  <img src="perrito6.jpeg" alt="labrador">
+                </ion-col>
+              </ion-row>
+              <ion-row> <!--fila 3-->
+                <ion-col>
+                  <img src="perrito7.jpeg" alt="orejon">
+                </ion-col>
+                <ion-col>
+                  <img src="perrito8.jpeg" alt="salchicha">
+                </ion-col>
+                <ion-col>
+                  <img src="perrito9.jpeg" alt="timido">
+                </ion-col>
+              </ion-row>
+            </ion-grid>
             </ion-content>
           </ion-tab>
-
 
           <!--botones de las pestañas-->
           <ion-tab-bar slot="bottom"> <!--contenedor de los botones de las pestañas-->
@@ -62,28 +146,29 @@
               <ion-label>Inicio</ion-label>
               <ion-icon name="home-outline"></ion-icon>
             </ion-tab-button>
-
             <ion-tab-button tab="buscar"> <!--boton de pestaña de buscar-->
                 <ion-label>Buscar</ion-label>
                 <ion-icon name="search-outline"></ion-icon>
               </ion-tab-button>
 
-         
+              <ion-tab-button tab="foto"> <!--boton de pestaña de buscar-->
+                <ion-label>Foto</ion-label>
+                <ion-icon name="search-outline"></ion-icon>
+              </ion-tab-button>
 
             <ion-tab-button tab="comprar"> <!--boton de pestaña de comprar-->
                 <ion-label>Comprar</ion-label>
                 <ion-icon name="bag-handle-outline"></ion-icon>
               </ion-tab-button>
-
-
-
             <ion-tab-button tab="perfil"> <!--boton de pestaña de perfil -->
                 <ion-label>Perfil</ion-label>
                 <ion-icon name="person-circle-outline"></ion-icon>
               </ion-tab-button>
           </ion-tab-bar>
 
+
+
         </ion-tabs> <!--fin de contenido de pestañas-->
       </ion-app>  
-</body>   
+</body>
 </html>
