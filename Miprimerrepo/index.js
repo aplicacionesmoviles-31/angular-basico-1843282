@@ -1,47 +1,38 @@
-z = 0;
-
-function suma(x,y) {
-    z = x + y;
-
-    console.log(z);
+var z = 0;
+function suma(x, y){
+   z = x + y;
+   console.log(z);
 }
-
 function saludar() {
-    alert("Hola,mundo");
+    alert("Hola, mundo");
 }
-
-//DOM //
+//DOM
 var btnSumar = document.getElementById("btnSumar");
 var btnSaludar = document.getElementById("btnSaludar");
 var ejemploTxt = document.getElementById("ejemploTxt");
+
 var texto = "";
-
-btnSaludar.addEventListener("click",function(){
-    console.log("Hola- Soy un event listener");
-
-    //btnSaludar.style.backgroundColor = "red" //
-if (btnSaludar.classList.contains("bgRed")){
-    btnSaludar.classList.remove("bgRed");
-}else {
-    btnSaludar.classList.add("bgRed");
-}
+/*
+btnSaludar.addEventListener("click", function(){
+   // console.log("holaaaaaa -- Event Listener");
+  //btnSaludar.style.backgroundColor = "red";
+  if (btnSaludar.classList.contains("bgRojo") ) {
+      btnSaludar.classList.remove("bgRojo");
+  }else {
+      btnSaludar.classList.add("bgRojo");
+  }
 });
-
-
-
 ejemploTxt.addEventListener("focus", function(){
     console.log("A escribir...");
 });
-
-ejemploTxt.addEventListener("keypress", function() {  
+ejemploTxt.addEventListener("keypress" , function(){
     texto = ejemploTxt.value;
     console.log(texto);
-});
+});*/
 
-function testImprimir() {
-    console.log("Escribiendo...");
+function testImprimir(){
+    console.log("Escribiendo....")
 }
-
 function imprimirTexto() {
     var texto = ejemploTxt.value;
     console.log(texto);
@@ -49,5 +40,26 @@ function imprimirTexto() {
 
 
 
+//------------
+var articuloTxt = document.getElementById("articulo");
+var precioTxt = document.getElementById("precio");
 
+var parrafoTotal = document.getElementById("parrafoTotal");
 
+var precio = precioTxt.value;
+var total = 0;
+
+function calcularTotal() {
+    precio = parseInt(precioTxt.value);
+    total = total + precio;
+    //console.log(total);
+
+    parrafoTotal.innerText = "Total: " + total ;
+
+    limpiarTextos();
+}
+
+function limpiarTextos() {
+    articuloTxt.value = "";
+    precioTxt.value = "";
+}
