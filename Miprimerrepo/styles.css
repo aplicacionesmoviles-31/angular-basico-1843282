@@ -1,18 +1,11 @@
 ion-card {
-    height: 500px;
+    height: 700px;
 }
 
 ion-card-header {
     padding-bottom: 0 !important;
 }
 
-.ion-page{
-    display: flex ;
-    height: 658px;
-    justify-content: space-around;
-    flex-direction: row;
-    display: block; 
-}
 
 #btnSaludar {
     text-align: center;
@@ -23,7 +16,7 @@ ion-button {
 
 ion-col img {
     width: 100%;
-    height: 114px ;
+    height: 152px ;
 }
 
 .boton2{
@@ -42,4 +35,24 @@ ion-col img {
 .bgRed button,
 ion-button button {
     background-color: inherit;
+}
+
+.articulo {
+    margin-top: 5rem;
+}
+
+input{
+    width: 100%;
+    margin-top: 8rem;
+}
+
+
+.botonLimpiar{
+    background-color: #3880ff;
+    color: white;
+    width: auto;
+    padding: 0.5rem;
+    margin-left: 0.2rem;
+    border-radius: 0.5rem;
+    font-weight: bold;
 }
