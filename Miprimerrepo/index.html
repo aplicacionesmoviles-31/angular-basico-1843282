@@ -21,7 +21,7 @@
                 <ion-grid>
                   <ion-row>
                     <ion-col size="1">
-                      <img src="perrito.jpeg" alt="" width="50px">
+                      <img src="perrito.jpeg" alt="" width="50px" class="redondo">
                     </ion-col>
                     <ion-col size="10">
                       <ion-card-subtitle>@pugbaby</ion-card-subtitle>
@@ -58,7 +58,7 @@
                    </ion-row>
                    <ion-row> <!--Fila de Comentario-->
                     <ion-col size="1">
-                      <img src="perrito7.jpeg" alt="" width="100%" height="100%">
+                      <img src="perrito7.jpeg" alt="" width="55px" class="redondo">
                     </ion-col>
                      <ion-col>
                        <ion-input placeholder="Agrega un comentario..."></ion-input>
@@ -72,7 +72,7 @@
                 <ion-grid>
                   <ion-row>
                     <ion-col size="1">
-                      <img src="perrito2.jpeg" alt="" width="50px">
+                      <img src="perrito2.jpeg" alt="" width="50px" class="redondo">
                     </ion-col>
                     <ion-col size="10">
                       <ion-card-subtitle>@Husky</ion-card-subtitle>
@@ -109,7 +109,7 @@
                    </ion-row>
                    <ion-row> <!--Fila de Comentario-->
                     <ion-col size="1">
-                      <img src="perrito5.jpeg" alt="">
+                      <img src="perrito5.jpeg" alt="" width="60px" class="redondo">
                     </ion-col>
                      <ion-col>
                        <ion-input placeholder="Agrega un comentario..."></ion-input>
@@ -123,7 +123,7 @@
                 <ion-grid>
                   <ion-row>
                     <ion-col size="1">
-                      <img src="perrito3.jpeg" alt="" width="50px">
+                      <img src="perrito3.jpeg" alt="" width="50px" class="redondo">
                     </ion-col>
                     <ion-col size="10">
                       <ion-card-subtitle>@Lomito22</ion-card-subtitle>
@@ -160,7 +160,7 @@
                    </ion-row>
                    <ion-row> <!--Fila de Comentario-->
                     <ion-col size="1">
-                      <img src="perrito8.jpeg" alt="">
+                      <img src="perrito8.jpeg" alt="" width="55px" class="redondo">
                     </ion-col>
                      <ion-col>
                        <ion-input placeholder="Agrega un comentario..."></ion-input>
@@ -174,7 +174,7 @@
                 <ion-grid>
                   <ion-row>
                     <ion-col size="1">
-                      <img src="perrito4.jpeg" alt="" width="50px">
+                      <img src="perrito4.jpeg" alt="" width="50px" class="redondo">
                     </ion-col>
                     <ion-col size="10">
                       <ion-card-subtitle>@Blacky</ion-card-subtitle>
@@ -211,7 +211,7 @@
                    </ion-row>
                    <ion-row> <!--Fila de Comentario-->
                     <ion-col size="1">
-                      <img src="perrito7.jpeg" alt="">
+                      <img src="perrito7.jpeg" alt="" width="55px" class="redondo">
                     </ion-col>
                      <ion-col>
                        <ion-input placeholder="Agrega un comentario..."></ion-input>
@@ -247,7 +247,9 @@
             <ion-grid> <!--Seccion de cuadricula-->
                 <ion-row> <!--Fila 1-->
                   <ion-col> <!--Columna 1-->
-                    Foto
+                    <ion-col>
+                      <img src="perrito.jpeg" alt="" width="95px" class="redondo">
+                    </ion-col>
                   </ion-col>
                   <ion-col> <!--Columna 2-->
                     <ion-row>
@@ -293,17 +295,17 @@
             <ion-grid> <!--Seccion de Bio-->
               <ion-row>
                 <ion-col>
-                  Sobre Mí
+                  Sobre Mí 
                 </ion-col>
               </ion-row>
             </ion-grid>
             <ion-grid> <!--Seccion de Botones-->
               <ion-row>
                 <ion-col>
-                  <ion-button>Seguir</ion-button> <!--Boton de Seguir-->
+                  <ion-button id="seguir-btn">Seguir</ion-button> <!--Boton de Seguir-->
                 </ion-col>
                 <ion-col>
-                  <ion-button>Mensaje</ion-button> <!--Boton de Mandar Mensaje-->
+                  <ion-button id="mensaje-btn">Mensaje</ion-button> <!--Boton de Mandar Mensaje-->
                 </ion-col>
                 <ion-col>
                   <ion-button>Whatsapp</ion-button> <!--Boton de Mensaje de whatsapp-->
@@ -311,6 +313,10 @@
               </ion-row>
             </ion-grid>
             <ion-grid> <!--Contenido de Galeria-->
+              <ion-row id="mensaje-container">
+                <ion-input placeholder="Escribe mensaje"></ion-input>
+                <ion-button onclick="toggleEditar()">Enviar</ion-button>
+              </ion-row>
               <ion-row> <!--Fila 1-->
                 <ion-col>
                   <img src="perrito.jpeg" alt="">
