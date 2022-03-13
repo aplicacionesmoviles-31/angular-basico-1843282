@@ -63,3 +63,31 @@ function limpiarTextos() {
     articuloTxt.value = "";
     precioTxt.value = "";
 }
+
+var seguirBtn = document.getElementById("seguir-btn");
+seguirBtn.addEventListener("click", function(){
+    if(this.innerHTML == "Seguir") {
+        this.innerHTML = "Dejar de Seguir";
+    } else {
+        this.innerHTML = "Seguir";
+    }
+});
+
+var mensajeBtn = document.getElementById("mensaje-btn");
+var mensajeContainer = document.getElementById("mensaje-container");
+
+mensajeContainer.style.display = "none";
+var editando = false;
+
+function toggleEditar(){
+
+    if(editando) {
+        mensajeContainer.style.display= "none";
+    } else {
+        mensajeContainer.style.display = "block";
+    }
+    editando = !editando;
+}
+mensajeBtn.addEventListener("click", function(){
+    toggleEditar();
+});
