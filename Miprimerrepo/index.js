@@ -91,3 +91,30 @@ function toggleEditar(){
 mensajeBtn.addEventListener("click", function(){
     toggleEditar();
 });
+
+//Galeria 
+var imagenes  = [
+    'img/meme-tierno.jpg',
+    'img/meme-tierno2.jpg',
+    'img/meme-tierno3.jpg',
+    'img/meme-tierno4.jpg',
+    'img/meme-tierno5.jpg',
+    'img/meme-tierno6.jpg',
+    'img/meme-tierno7.jpg',
+    'img/meme-tierno8.jpg',
+    'img/meme-tierno9.jpg',
+    
+];
+//For
+var galeria = document.getElementById("galeria");
+for(var i = 0; i < imagenes.length ; i++) {
+    var col = document.createElement("ion-col");
+    col.size= "4";
+    var imagen = document.createElement("img");
+
+    imagen.src = imagenes[i];
+
+    col.appendChild(imagen);
+
+    galeria.appendChild(col);
+}
