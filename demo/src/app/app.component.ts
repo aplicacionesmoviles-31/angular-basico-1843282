@@ -13,5 +13,5 @@ export class AppComponent {
   toggleGrid(): void {
     this.grid = !this.grid;
   }
-  
+
 }
