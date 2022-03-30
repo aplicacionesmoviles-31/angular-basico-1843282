@@ -9,10 +9,17 @@ export class AppComponent {
   title = 'Hola, mundo!';
 
   imagenes = [
-    "../assets/img/verano.jpg",
     "../assets/img/playa.jpg",
+    "../assets/img/verano.jpg",
     "../assets/img/verano3.jpg"
   ];
 
+  grid = true;
+
   ingles = false;
+
+  toggleGrid(): void {
+    this.grid = !this.grid;
+  }
+  
 }
