@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import {HttpClient} from '@angular/common/http';
 
 @Component({
   selector: 'app-feed',
@@ -7,35 +8,49 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class FeedComponent implements OnInit {
 
-  constructor() { }
+
+  constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
+    this.getPublicaciones().subscribe(res => {
+
+      this.resPublicaciones = res;
+    });
   }
+
+  resPublicaciones : any = [];
+
+  getPublicaciones() {
+    return this.http.get('https://insta-ionic-f21ba-default-rtdb.firebaseio.com/publicaciones.json')
+  }
+
 
   @Input() comentario: string = '';
 
-  postComment(_comentario: string, publicacion: any): void {
+  postComment(comentario: string, publicacion: any): void {
     publicacion.comentario = this.comentario;
     this.comentario = "";
   }
-
-  publicaciones = [ {
-    "usuario": "@maxschultz",
+  publicaciones = [  {
+    "usuario": "@maxDog",
     "imagen": "../assets/img/playa.jpg",
-    "caption": "Aqui en la playa",
-    "comentario": ""
+    "caption": "Aqui en Cancun...",
+    "comentario": "", 
+    "id": "1"
   },
   {
-    "usuario": "@jackWhitte",
+    "usuario": "@maxDog",
     "imagen": "../assets/img/verano.jpg",
-    "caption": "Verano 2021",
-    "comentario": ""
+    "caption": "Playita",
+    "comentario": "", 
+    "id": "2"
   },
   {
-    "usuario": "@WillJohnson",
-    "imagen": "../assets/img/verano3.jpg", 
-    "caption": "Paisajes en paises bajos",
-    "comentario": ""
+    "usuario": "@maxDog",
+    "imagen": "../assets/img/verano3.jpg",
+    "caption": "Paraiso",
+    "comentario": "", 
+    "id": "3"
   }
   ];
 

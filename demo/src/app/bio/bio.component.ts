@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import * as data from '../datos.json'; 
 
 @Component({
   selector: 'app-bio',
-  templateUrl: './bio.component.html',
+  templateUrl: './bio.component.html', 
   styleUrls: ['./bio.component.css']
 })
 export class BioComponent implements OnInit {

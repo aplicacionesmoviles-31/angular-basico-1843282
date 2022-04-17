@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Hola, mundo!';
   grid = true;
-  ingles = false;
+  ingles = false;  
 
   toggleGrid(): void {
     this.grid = !this.grid;
