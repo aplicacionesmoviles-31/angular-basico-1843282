@@ -1,17 +1,36 @@
 import { Component, OnInit, Input } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 
+import { map } from 'rxjs/operators';
+
+
+import { FirebaseDbService } from '../firebase-db.service';
+import { AngularFireDatabase, AngularFireList } from '@angular/fire/compat/database';
+import { Observable } from 'rxjs';
+
+//import {Post} from './';
+
 @Component({
   selector: 'app-feed',
   templateUrl: './feed.component.html',
   styleUrls: ['./feed.component.css']
 })
+
 export class FeedComponent implements OnInit {
+  data: Observable<unknown[]>;
 
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, 
+    private dbFirebase: FirebaseDbService, 
+    private dbF: AngularFireDatabase) { 
 
-  ngOnInit(): void {
+        //this.dataRef = this.dbF.list('publicaciones');
+        //this.data = dataRef.valueChanges();
+
+        this.data = this.dbF.list('publicaciones').valueChanges();
+  }
+
+  ngOnInit(): void {  
     this.getPublicaciones().subscribe(res => {
 
       this.resPublicaciones = res;
@@ -31,27 +50,5 @@ export class FeedComponent implements OnInit {
     publicacion.comentario = this.comentario;
     this.comentario = "";
   }
-  publicaciones = [  {
-    "usuario": "@maxDog",
-    "imagen": "../assets/img/playa.jpg",
-    "caption": "Aqui en Cancun...",
-    "comentario": "", 
-    "id": "1"
-  },
-  {
-    "usuario": "@maxDog",
-    "imagen": "../assets/img/verano.jpg",
-    "caption": "Playita",
-    "comentario": "", 
-    "id": "2"
-  },
-  {
-    "usuario": "@maxDog",
-    "imagen": "../assets/img/verano3.jpg",
-    "caption": "Paraiso",
-    "comentario": "", 
-    "id": "3"
-  }
-  ];
 
 }
