@@ -2,7 +2,6 @@
 * {
     font-family:Arial, Helvetica, sans-serif;
 }
-
-.hydrated {
-    width: 100%;
+ion-app {
+    //margin-top: 50px;
 }

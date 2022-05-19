@@ -4,15 +4,14 @@
 
 export const environment = {
   production: false,
-   firebaseConfig: {
-    apiKey: "AIzaSyA85QHu8_CXhBKaoRFLtC3txgXcCZttQ-I",
-    authDomain: "insta-ionic031-1843282.firebaseapp.com",
-    projectId: "insta-ionic031-1843282",
-    storageBucket: "insta-ionic031-1843282.appspot.com",
-    messagingSenderId: "215552295642",
-    appId: "1:215552295642:web:06c7a904b032ad8c20dbe3"
+  firebaseConfig : {
+    apiKey: "AIzaSyDv0tm_JGg-88KNkz5lAPEV0WyWt71lQB0",
+    authDomain: "insta-ionic-f21ba.firebaseapp.com",
+    projectId: "insta-ionic-f21ba",
+    storageBucket: "insta-ionic-f21ba.appspot.com",
+    messagingSenderId: "64325118116",
+    appId: "1:64325118116:web:8009656e9f9f3b0de25e31"
   }
-  
 };
 
 /*
