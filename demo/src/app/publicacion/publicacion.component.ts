@@ -18,25 +18,25 @@ export class PublicacionComponent implements OnInit {
 
   //BD
   publicaciones = [ {
-    "usuario": "@maxDOG",
-    "imagen": "../assets/img/huskt.jpeg",
+    "usuario": "@RamonDog",
+    "imagen": "../assets/imagenes/playa.jpg",
     "caption": "Aqui en Cancun...",
     "comentario": "", 
-    "id": "1"
+    "id": "3"
   },
   {
-    "usuario": "@Photoshot",
-    "imagen": "../assets/img/playa.jpg",
-    "caption": "En la playita...",
+    "usuario": "@RamonDog",
+    "imagen": "../assets/imagenes/verano.jpg",
+    "caption": "Verano de aventuras...",
     "comentario": "", 
     "id": "2"
   },
   {
-    "usuario": "@TheCat",
-    "imagen": "../assets/img/verano3.jpg",
-    "caption": "Recuerdos...",
+    "usuario": "@RamonDog",
+    "imagen": "../assets/imagenes/verano3.jpg",
+    "caption": "Verano relajante...",
     "comentario": "", 
-    "id": "3"
+    "id": "1"
   }
   ];
 
@@ -50,5 +50,6 @@ export class PublicacionComponent implements OnInit {
     }
     return this.publicacionDetalle;
   }
+
 
 }

@@ -1,38 +1,39 @@
-{
+ {
     "publicaciones": [
         {
-            "usuario": "@maxschultz",
-            "imagen": "../assets/img/playa.jpg",
-            "caption": "Aqui en la playa",
-            "comentario": "",
-            "id" : "1"
+            "usuario": "@maxelperrito",
+            "imagen": "../assets/imagenes/perrito.jpeg",
+            "caption": "Aqui en la playita...",
+            "comentario": "", 
+            "id": "3"
           },
           {
-            "usuario": "@jackWhitte",
-            "imagen": "../assets/img/verano.jpg",
-            "caption": "Verano 2021",
-            "comentario": "",
-            "id" : "2"
+            "usuario": "@maxelperrito",
+            "imagen": "../assets/imagenes/verano.jpg",
+            "caption": "",
+            "comentario": "",   
+            "id": "2"
           },
           {
-            "usuario": "@WillJohnson",
-            "imagen": "../assets/img/verano3.jpg", 
-            "caption": "Paisajes en paises bajos",
-            "comentario": "",
-            "id" : "3"
+            "usuario": "@maxelperrito",
+            "imagen": "../assets/imagenes/verano3.jpg",
+            "caption": "",
+            "comentario": "", 
+            "id": "1"
           }
     ],
     "usuario" : {
       "nombre":"Max",
-      "alias": "Husky",
-      "fotoPerfil": "../assets/img/husky.jpeg",
-      "seguidores": 200,
-      "seguidos": 1,
+      "alias": "@maxelperrito",  
+      "fotoPerfil": "../assets/imagenes/perrito.jpeg",
+      "seguidores": 3,
+      "seguidos": 20,
       "bio": "Guau", 
       "publicaciones": [
-        "../assets/img/playa.jpeg",
-        "../assets/img/verano.jpg",
-        "../assets/img/verano3.jpg"
+        "../assets/imagenes/playa.jpg",
+        "../assets/imagenes/verano.jpg",
+        "../assets/imagenes/verano3.jpg"
       ]
     }
 }
+

@@ -4,14 +4,20 @@ header {
     position: absolute;
     top: 0;
 }
+
 header nav ul {
     list-style: none;
 }
+
 header nav ul li {
     display: inline;
     padding: 10px 5px;
 }
+
 header nav ul li a {
     color: white;
     text-decoration: none;
+}
+.alinear-izq {
+    text-align: left;
 }

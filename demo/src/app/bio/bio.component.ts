@@ -1,17 +1,21 @@
 import { Component, OnInit } from '@angular/core';
-import * as data from '../datos.json'; 
+import * as data from '../datos.json';
+
+import { ActionSheetController } from '@ionic/angular';
 
 @Component({
   selector: 'app-bio',
-  templateUrl: './bio.component.html', 
+  templateUrl: './bio.component.html',
   styleUrls: ['./bio.component.css']
 })
 export class BioComponent implements OnInit {
 
-  constructor() { }
+  constructor(private actionSheetController: ActionSheetController) { }
 
   ngOnInit(): void {
   }
+
+  //datos: data = {}
 
   siguiendo = false;
 
@@ -21,15 +25,34 @@ export class BioComponent implements OnInit {
   usuario = {
     "nombre":"Max",
     "alias": "@maxelperrito",
-    "fotoPerfil": "../assets/img/husky.jpeg",
-    "seguidores": 200,
+    "fotoPerfil": "../assets/imagenes/perrito.jpeg",
+    "seguidores": 3,
     "seguidos": 20,
-    "bio": "Guau", 
-    "publicacioness": [
-      "../assets/img/playa.jpg",
-      "../assets/img/verano.jpg",
-      "../assets/img/verano3.jpg"
+    "bio": "Guau",
+
+    publicaciones: [
+      "../assets/imagenes/playa.jpg",
+      "../assets/imagenes/verano.jpg",
+      "../assets/imagenes/verano3.jpg",
     ]
+  }
+
+  async createActionSheet() {
+    const actionSheet = await this.actionSheetController.create({
+      buttons: [{
+        text: 'Cancelar', 
+        role: 'cancel'
+      },
+      {
+        text: 'Bloquear usuario', 
+        role: 'destructive'
+      }]
+    });
+
+    await actionSheet.present();
+
+    const { role, data } = await actionSheet.onDidDismiss();
+    console.log('onDidDismiss resolved with role and data', role, data);
   }
 
   seguir(): void {
@@ -37,7 +60,7 @@ export class BioComponent implements OnInit {
   }
 
   enviarMensaje(): void {
-
+    
   }
 
   enviarEmail(): void {
@@ -45,7 +68,8 @@ export class BioComponent implements OnInit {
   }
 
   desplegarOpciones(): void {
-    //En proceso
+    //En proceso.
   }
+
 
 }
