@@ -1,13 +1,9 @@
 # angular-basico-1843282
 Guillermo Blancarte Cordero
 
-Perfil y feed funcionando 
+PIA Funcionando 
 
-![image](https://user-images.githubusercontent.com/54460961/167340358-d6bc209a-1408-4b06-8faa-93bc5df2c2a1.png)
-
-![image](https://user-images.githubusercontent.com/54460961/167340404-1d8654d7-5297-48b1-ab5f-1467cc9fe821.png)
-
-![image](https://user-images.githubusercontent.com/54460961/167340522-c0d62031-cbda-4076-bf8c-3e15a6e935d5.png)
-
-
-
+![Captura de pantalla (702)](https://user-images.githubusercontent.com/54460961/169739357-b6903575-aebf-4728-9159-b76a27ac0db5.png)
+![Captura de pantalla (703)](https://user-images.githubusercontent.com/54460961/169739471-447d77e5-4e5a-4e0a-be14-3a43d9e76d2a.png)
+![Captura de pantalla (704)](https://user-images.githubusercontent.com/54460961/169739594-f0c34c10-ce13-462a-ad6b-e8e9a297b876.png)
+![Captura de pantalla (705)](https://user-images.githubusercontent.com/54460961/169739692-7822eea4-3b20-409d-9e96-88cf7a97a6c0.png)
